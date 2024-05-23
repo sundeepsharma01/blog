@@ -6,6 +6,26 @@ export default function Ad1() {
 
   useEffect(() => {
     function startAd() {
+      // function for google analytics
+      function Initgtag(){
+        let gsc = document.createElement("script");
+        gsc.src = "https://www.googletagmanager.com/gtag/js?id=G-E6MLEWLK39";
+        gsc.setAttribute("async","true");
+        document.body.appendChild(gsc);
+        gsc.onload=()=>{console.log("Loaded analytics");}
+        let gsc1 = document.createElement("script");
+        gsc1.innerHTML=`
+          window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-E6MLEWLK39');
+        `;
+        document.body.appendChild(gsc1);
+        gsc1.onload=()=>{console.log("Loaded analytics1");}
+    }
+    // google analytics close
+    Initgtag()
       if (document.querySelector('#a1') || document.querySelector('#a2') || document.querySelector('#a3') || document.querySelector('#a4')) {
         return;
       }
@@ -15,7 +35,7 @@ export default function Ad1() {
       sp.type = 'text/javascript';
       sp.innerHTML = `
         atOptions = {
-          'key' : '6d74d23d628609fe44464fb80acc6f22',
+          'key' : 'e381a955d3b1b962b5508280f7fe4a74',
           'format' : 'iframe',
           'height' : 250,
           'width' : 300,
@@ -23,7 +43,7 @@ export default function Ad1() {
         };
       `;
       let sp1 = document.createElement('script');
-      sp1.src = '//collectbladders.com/6d74d23d628609fe44464fb80acc6f22/invoke.js';
+      sp1.src = '//collectbladders.com/e381a955d3b1b962b5508280f7fe4a74/invoke.js';
       sp.onload = () => {
         console.log('loaded1');
       };
@@ -32,7 +52,7 @@ export default function Ad1() {
         ppc.id = 'a2';
         ppc.innerHTML = `
           atOptions = {
-            'key' : '7a0aed8f84ed52875aca496dfed51337',
+            'key' : '43011e041eecaf1a01f93581e5ec645c',
             'format' : 'iframe',
             'height' : 300,
             'width' : 160,
@@ -40,13 +60,13 @@ export default function Ad1() {
           };
         `;
         let ppc1 = document.createElement('script');
-        ppc1.src = '//collectbladders.com/7a0aed8f84ed52875aca496dfed51337/invoke.js';
+        ppc1.src = '//collectbladders.com/43011e041eecaf1a01f93581e5ec645c/invoke.js';
         ppc1.onload = () => {
           let ppp = document.createElement('script');
           ppp.id = 'a3';
           ppp.innerHTML = `
             atOptions = {
-              'key' : 'b1ca5f8fbafd87df7f466d1df734cfcc',
+              'key' : 'fb6ab6a73df84272d6ce4f1911c96429',
               'format' : 'iframe',
               'height' : 60,
               'width' : 468,
@@ -54,13 +74,13 @@ export default function Ad1() {
             };
           `;
           let ppp1 = document.createElement('script');
-          ppp1.src = '//collectbladders.com/b1ca5f8fbafd87df7f466d1df734cfcc/invoke.js';
+          ppp1.src = '//collectbladders.com/fb6ab6a73df84272d6ce4f1911c96429/invoke.js';
           ppp1.onload = () => {
             let ppk = document.createElement('script');
             ppk.id = 'a4';
             ppk.innerHTML = `
               atOptions = {
-                'key' : '6d298f91c4654d7b180a646a7fa5836f',
+                'key' : '7aa7a1d58051259a6046d7e9c85f54b9',
                 'format' : 'iframe',
                 'height' : 50,
                 'width' : 320,
@@ -68,7 +88,7 @@ export default function Ad1() {
               };
             `;
             let ppk1 = document.createElement('script');
-            ppk1.src = '//collectbladders.com/6d298f91c4654d7b180a646a7fa5836f/invoke.js';
+            ppk1.src = '//collectbladders.com/7aa7a1d58051259a6046d7e9c85f54b9/invoke.js';
             ppk1.onload = () => {
               console.log('loaded');
             };

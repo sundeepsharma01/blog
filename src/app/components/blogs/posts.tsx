@@ -3,6 +3,9 @@ import Ad1 from "../../components/ad1"
 import Ad2 from "../../components/ad2"
 import Ad3 from "../../components/ad3"
 import Ad4 from "../../components/ad4"
+import "../../hljs.css"
+import Share from "../../components/share"
+import Recent from "./related"
 export default async function Post({p}){
     let data = await getPost(p)
     // console.log(data);
@@ -25,6 +28,12 @@ export default async function Post({p}){
                     </div>
                 
             }
+            <hr />
+            <Share/>
+            <div>
+                <h3 className="mt-3">More Posts For You!</h3><hr />
+            </div>
+            <Recent page="1"/>
             <Ad4/>
             <Ad2/>
             <Ad3/>

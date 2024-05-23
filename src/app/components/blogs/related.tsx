@@ -1,15 +1,9 @@
 import Link from "next/link"
-import Ad1 from "../../components/ad1"
-import Ad2 from "../../components/ad2"
-import Ad3 from "../../components/ad3"
-import Ad4 from "../../components/ad4"
 const BlogPostCard = ({ title, description,slug }) => {
   return (
-    <>
     <div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-1 hover:scale-105">
       <div className="p-6">
         <h2 className="text-xl font-semibold text-gray-800">{title}</h2>
-        <p className="text-gray-600 mt-2">{description}</p>
         <div className="mt-4">
         </div>
         <div className="mt-4">
@@ -19,11 +13,10 @@ const BlogPostCard = ({ title, description,slug }) => {
         </div>
       </div>
     </div>
-    </>
   );
 };
 
-const BlogPosts = async({page}) => {
+const Recent = async({page}) => {
   let frm;
   let to;
   async function getPost(){
@@ -43,7 +36,6 @@ const BlogPosts = async({page}) => {
   // console.log(jsonData);
   return (
     <>
-        <Ad1/>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-8">
       {jsonData.data.map((post, index) => (
         <BlogPostCard key={index} {...post} />
@@ -60,11 +52,8 @@ const BlogPosts = async({page}) => {
           </Link>
 
     </div>
-    <Ad2/>
-    <Ad3/>
-    <Ad4/>
     </>
   );
 };
 
-export default BlogPosts;
+export default Recent;

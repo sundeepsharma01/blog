@@ -14,7 +14,7 @@ export async function generateMetadata({ params }) {
     }
   }
 export default function Posts({params}){
-    console.log("params is",params);
+    // console.log("params is",params);
   return(
     <>
     <Sidebar/>
