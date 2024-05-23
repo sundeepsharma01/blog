@@ -1,0 +1,115 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css);
+@tailwind base;
+h1 {
+  @apply text-2xl;
+  font-weight: bolder;
+}
+h2 {
+  @apply text-xl;
+  font-weight: bold;
+}
+h3 {
+  @apply text-lg;
+  font-weight: bold;
+}
+a {
+   @apply text-blue-200;
+}
+@tailwind components;
+@tailwind utilities;
+.navi *{
+color: white !important;
+}
+
+/* Hide scrollbar for Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+/* Hide scrollbar for IE, Edge and Chrome */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.wave path {
+  animation: wave 4s ease-in-out infinite;
+}
+
+@keyframes border-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-border-spin {
+  animation: border-spin 10s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hover\:animate-blink-light:hover {
+  animation: blink 1s infinite;
+}
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-fade-in-out {
+  animation: fade-in-out 3s linear;
+}
+
+pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{background:#221a0f;color:#d3af86}.hljs-comment,.hljs-quote{color:#d6baad}.hljs-meta,.hljs-name,.hljs-regexp,.hljs-selector-class,.hljs-selector-id,.hljs-tag,.hljs-template-variable,.hljs-variable{color:#dc3958}.hljs-built_in,.hljs-deletion,.hljs-link,.hljs-literal,.hljs-number,.hljs-params,.hljs-type{color:#f79a32}.hljs-addition,.hljs-bullet,.hljs-string,.hljs-symbol{color:#889b4a}.hljs-function,.hljs-keyword,.hljs-selector-tag{color:#98676a}.hljs-attribute,.hljs-section,.hljs-title{color:#f06431}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+iframe[title="YouTube video player"]{
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
