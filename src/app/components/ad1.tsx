@@ -25,7 +25,6 @@ export default function Ad1() {
         gsc1.onload=()=>{console.log("Loaded analytics1");}
     }
     // google analytics close
-    Initgtag()
       if (document.querySelector('#a1') || document.querySelector('#a2') || document.querySelector('#a3') || document.querySelector('#a4')) {
         return;
       }
@@ -116,6 +115,7 @@ export default function Ad1() {
       window.removeEventListener('scroll', startAd);
       window.removeEventListener('mousemove', startAd);
       window.removeEventListener('mouseover', startAd);
+      Initgtag()
     }
 
     window.addEventListener('scroll', startAd);
